@@ -2,67 +2,67 @@
 <items version="2" >
 
     <item
-        jar="/home/sergi/Code/Todos/app/build/intermediates/exploded-aar/com.github.afollestad.material-dialogs/core/0.8.5.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="bb5660e8081c471ab053b7f14d08a7d7df64c019">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/classes-dce5d366e233365dc4bc4d1cafba00b7b98d5e79.jar" />
-    </item>
-    <item
-        jar="/home/sergi/Code/Todos/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/classes-5329b7be7c9945910e0b4333c8a3dc3a8cced9bc.jar" />
-    </item>
-    <item
-        jar="/home/sergi/Code/Todos/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/classes-7bcd430f3597e5d6854e6c0394324225d4068f59.jar" />
-    </item>
-    <item
-        jar="/home/sergi/Code/Todos/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/classes-729817d8bd0d5b9b8545bc5f856634884334b586.jar" />
-    </item>
-    <item
-        jar="/home/sergi/Code/Todos/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/classes-8ba43492a8abdc7e5d8da2dac9ec781d6a1df963.jar" />
-    </item>
-    <item
-        jar="/home/sergi/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jar="C:\Users\spine\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/gson-2.4-7fbdd7a3565f552359698a13cec5c6f0a091fa46.jar" />
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\gson-2.4-1ef16ccd1c3498f34dc9e1ed509a3b6b70a36a2c.jar" />
     </item>
     <item
-        jar="/home/sergi/Code/Todos/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jar="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-bbade3be999df43a97a57943974471c6afa8df24.jar" />
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\classes-a8c2b57bdd6eeb48ec1cd78bceaf351e11debed4.jar" />
     </item>
     <item
-        jar="/home/sergi/Code/Todos/app/build/intermediates/exploded-aar/me.zhanghai.android.materialprogressbar/library/1.1.4/jars/classes.jar"
+        jar="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\exploded-aar\me.zhanghai.android.materialprogressbar\library\1.1.4\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="2a24cba08e1d865a79e61335f5a1bd64d520106d">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/classes-f585803ceea8b87919f1146e4cebac9ac45b1feb.jar" />
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\classes-744ed484f7035d85b303cca31ffc33fba1597884.jar" />
     </item>
     <item
-        jar="/home/sergi/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jar="C:\Users\spine\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/home/sergi/Code/Todos/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-3d62ca71643d1c159b20583802ca80544570c917.jar" />
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-781e0918fe24908d005915020ccfac82c5b348db.jar" />
+    </item>
+    <item
+        jar="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-030458ac4efbf10b9708f83b947fef7c75cb109c.jar" />
+    </item>
+    <item
+        jar="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\classes-c0783145007debb5f1f55585bf8f738030079cd1.jar" />
+    </item>
+    <item
+        jar="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\classes-7d930ebbec482ae468c2a7dd47336ff9d142a1cc.jar" />
+    </item>
+    <item
+        jar="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\classes-74034fc179392272f7f335281c130b2a88323ee2.jar" />
+    </item>
+    <item
+        jar="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\exploded-aar\com.github.afollestad.material-dialogs\core\0.8.5.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4f2a63b6774f93f1fad71fb271a51666e755417c">
+        <dex dex="C:\Users\spine\Desktop\Code\TODOs2\app\build\intermediates\pre-dexed\debug\classes-27b11bc69651d63f74ffe27b71dcd2e247f739e0.jar" />
     </item>
 
 </items>

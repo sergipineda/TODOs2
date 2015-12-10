@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fabRemove = (FloatingActionButton) findViewById(R.id.fabremove);
         //FloatingActionButton fabRemove = (FloatingActionButton) findViewById(R.id.fab_remove);
         //fab.setOnClickListener((view)   {
        //           @Override
@@ -266,7 +267,19 @@ public class MainActivity extends AppCompatActivity
                     taskDone = false;
                 }
             }
+
         });
+
     }
+    public void removeTask(View view){
+
+        for (int i = tasks.size() -1; i >= 0; i--)
+        {
+            if (tasks.get(i).isDone()) { tasks.remove(i); }
+        }
+
+        adapter.notifyDataSetChanged();
     }
+
+}
 
