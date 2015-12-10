@@ -1,11 +1,11 @@
 package com.iesebre.dam2.sergi.todos;
 
-import android.content.Intent;
+
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -17,7 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.Toast;
+
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.gson.Gson;
@@ -57,9 +57,10 @@ public class MainActivity extends AppCompatActivity
         ]
          */
         if (todoList == null) {
-            String initial_json = "[{\"name\":\"Comprar llet\", \"done\": true, \"priority\": 2},\n" +
+            String initial_json = "[\n" +
+                    "         {\"name\":\"Comprar llet\", \"done\": true, \"priority\": 2},\n" +
                     "         {\"name\":\"Comprar pa\", \"done\": true, \"priority\": 1},\n" +
-                    "         {\"name\":\"Fer exercisi\", \"done\": false, \"priority\": 3}]" ;
+                    "         {\"name\":\"Fer exercici\", \"done\": false, \"priority\": 3}\n" + "]" ;
             SharedPreferences.Editor editor = todos.edit();
             editor.putString(TODO_LIST,initial_json);
             editor.commit();
@@ -67,11 +68,11 @@ public class MainActivity extends AppCompatActivity
         }
 
         Log.d("TAG PROVA", "**********************************");
-        Log.d("TAG PROVA",todoList); todoList=null;
+        Log.d("TAG PROVA",todoList);
         Log.d("TAG PROVA", "**********************************");
 
 
-        Toast.makeText(this, todoList, Toast.LENGTH_SHORT).show();
+
         /* JSON EXAMPLE
 
         [
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity
         if (temp != null) {
             tasks = temp;
         } else {
-            //Error TODO
+            //ErrorTODO
         }
 
 
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity
         ListView todoslv =(ListView) findViewById(R.id.todolistview);
         
         //We bind our arraylist os task the adapter
-        CustomListAdapter adapter = new CustomListAdapter(this, tasks);
+        adapter = new CustomListAdapter(this, tasks);
         todoslv.setAdapter(adapter);
         
 
@@ -186,20 +187,17 @@ public class MainActivity extends AppCompatActivity
 
 
     }
-    public void showAddTaskForm(){
+    public void showAddTaskForm(View view){
         MaterialDialog dialog = new MaterialDialog.Builder(this).
-                title('Afegir tasca').
-                customView(R.layout.formAddTask).
+                title("Afegir tasca").
+                customView(R.layout.form_add_task, true).
                 negativeText("Cancel·la").
                 positiveText("Afegir").
                 negativeColor(Color.parseColor("#2196F3")).
                 positiveColor(Color.parseColor("#2196F3")).
-                callback( (dialog){
-                        //TODO
 
-                }).
                 build();
 
-
+        dialog.show();
     }
 }
