@@ -6,6 +6,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -16,14 +18,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ListView;
 
 
+import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+
+import static android.widget.CompoundButton.*;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,9 +40,11 @@ public class MainActivity extends AppCompatActivity
     private static final String TODO_LIST = "todo_list";
 
     private Gson gson;
-
+    private String taskName;
+    private  int taskPriority;
+    private boolean taskDone;
     public TodoArrayList tasks;
-
+    private CustomListAdapter adapter;
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -95,20 +105,21 @@ public class MainActivity extends AppCompatActivity
         }
 
 
-        
+
 
         ListView todoslv =(ListView) findViewById(R.id.todolistview);
-        
+
         //We bind our arraylist os task the adapter
         adapter = new CustomListAdapter(this, tasks);
         todoslv.setAdapter(adapter);
-        
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //FloatingActionButton fabRemove = (FloatingActionButton) findViewById(R.id.fab_remove);
         //fab.setOnClickListener((view)   {
        //           @Override
 //            public void onClick(View view) {
@@ -187,17 +198,75 @@ public class MainActivity extends AppCompatActivity
 
 
     }
-    public void showAddTaskForm(View view){
+    public void showAddTaskForm(View view) {
+        taskDone = false;
+        EditText taskNameText;
+        EditText taskPriorityText;
+        CheckBox taskDoneText;
         MaterialDialog dialog = new MaterialDialog.Builder(this).
-                title("Afegir tasca").
+                title("Add new Task").
                 customView(R.layout.form_add_task, true).
-                negativeText("Cancel·la").
-                positiveText("Afegir").
-                negativeColor(Color.parseColor("#2196F3")).
+                negativeText("Cancel").
+                positiveText("Add").
+                negativeColor(Color.parseColor("#ff3333")).
                 positiveColor(Color.parseColor("#2196F3")).
+                onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(MaterialDialog dialog, DialogAction which) {
+                        final TodoItem todoItem = new TodoItem();
+                        todoItem.setName(taskName);
+                        todoItem.setPriority(taskPriority);
+                        todoItem.setDone(taskDone);
+                        tasks.add(todoItem);
 
+                        adapter.notifyDataSetChanged();
+                    }
+                }).
                 build();
-
         dialog.show();
+
+        taskNameText = (EditText) dialog.getCustomView().findViewById(R.id.task_title);
+        taskNameText.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                taskName = s.toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        taskPriorityText = (EditText) dialog.getCustomView().findViewById(R.id.task_Priority);
+        taskPriorityText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                taskPriority = Integer.parseInt(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        taskDoneText = (CheckBox) dialog.getCustomView().findViewById(R.id.task_Done);
+        taskDoneText.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    taskDone = true;
+                } else {
+                    taskDone = false;
+                }
+            }
+        });
     }
-}
+    }
+

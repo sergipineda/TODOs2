@@ -47,8 +47,9 @@ public class CustomListAdapter extends BaseAdapter {
         }
         TextView tv =(TextView) convertView.findViewById(R.id.todolistitemtext);
         //tv.setText("PROVA");
-        tv.setText(list.get(position).getName() + "p: "+ list.get(position).getPriority()+ "done:"+ list.get(position
-        )get.isDone());
+        tv.setText(list.get(position).getName()
+                + " p: " + list.get(position).getPriority() +
+                " done: " + list.get(position).isDone());
                return convertView;
     }
 }
