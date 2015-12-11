@@ -25,5 +25,22 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_add"
         android:onClick="showAddTaskForm"/>
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        app:layout_anchor="@id/fab"
+        android:layout_gravity="top|end"
+        app:layout_anchorGravity="top"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabremove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:src="@android:drawable/ic_delete"
+        app:backgroundTint="@color/md_edittext_error"
+        app:layout_anchor="@id/space"
+        app:layout_anchorGravity="top"
+        android:onClick="removeTask"/>
 
 </android.support.design.widget.CoordinatorLayout>
