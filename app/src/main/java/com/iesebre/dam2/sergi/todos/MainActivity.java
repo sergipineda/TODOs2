@@ -21,7 +21,9 @@ import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 
 import com.afollestad.materialdialogs.DialogAction;
@@ -273,9 +275,14 @@ public class MainActivity extends AppCompatActivity
     }
     public void removeTask(View view){
 
+        ListView lvItems = (ListView) findViewById(R.id.todolistview);
+
         for (int i = tasks.size() -1; i >= 0; i--)
         {
-            if (tasks.get(i).isDone()) { tasks.remove(i); }
+            LinearLayout vwParentRow = (LinearLayout) lvItems.getChildAt(i);
+            CheckBox btnChild = (CheckBox)vwParentRow.getChildAt(0);
+            if ( btnChild.isChecked()) {
+                tasks.remove(i); }
         }
 
         adapter.notifyDataSetChanged();
