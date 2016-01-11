@@ -20,8 +20,8 @@
     android:text="Nom tasca"
     android:gravity="center_vertical"
     android:textSize="25dp"
-        android:onClick="editTask"
-        android:clickable="true"></TextView>
+    android:onClick="editTask"
+    android:clickable="true"></TextView>
 
 
 </LinearLayout >

@@ -287,6 +287,14 @@ public class MainActivity extends AppCompatActivity
 
         adapter.notifyDataSetChanged();
     }
+    public void editTask(View view){
+
+        ListView lvItems = (ListView) findViewById(R.id.todolistview);
+
+        
+
+        adapter.notifyDataSetChanged();
+    }
 
 }
 
