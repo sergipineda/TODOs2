@@ -53,6 +53,22 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+
+
+        if (tasks == null) {
+            return;
+        }
+
+        String tasksToSave = gson.toJson(tasks);
+
+        SharedPreferences todos = getSharedPreferences(SHARED_PREFERENCES_TODOS, 0);
+        SharedPreferences.Editor editor = todos.edit();
+        editor.putString(TODO_LIST, tasksToSave);
+        editor.apply();
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
